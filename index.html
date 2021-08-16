@@ -1,1 +1,765 @@
-AoxiangFan here, homepage building in process.
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>REN Jing</title>
+
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="favicon_io/site.webmanifest">
+<link rel="stylesheet" href="css/academicons.min.css"/>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-sm-12 col-md-4 col-lg-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-sm-12 col-md-8 col-lg-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">REN Jing</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="#pub">Publications</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://scholar.google.com/citations?user=qkadBVcAAAAJ&amp;hl=en">
+    <span class="ai ai-google-scholar ai-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/llorz">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<div class="row">
+<h1 class="optima" id="home">
+About me
+</h1>
+</div>
+<div class="row">
+<div class="column_info" style="column-gap:5px">
+<p><span> I am currently a Ph.D candidate in <a href="https://cemse.kaust.edu.sa/vcc">VCC</a>, <a href="https://www.kaust.edu.sa/en">KAUST</a>, supervised by Prof. <a href="http://peterwonka.net/">Peter Wonka</a> and Prof. <a href="http://www.lix.polytechnique.fr/~maks/">Maks Ovsjanikov</a>. Before that, I obtained the MSc. degree from <a href="https://www.maths.ox.ac.uk/">Oxford University</a>, UK, and the BSc. degree from <a href="https://www.zju.edu.cn/english/">Zhejiang University</a>, China. My research is mainly related to shape analysis and geometry processing. I am also interested in computer graphics and computer vision in general. Currently I am working on shape matching with deep learning and shape reconstruction with optimization techniques. </span></p>
+<p><span> You can find my full CV <a href="http://llorz.github.io/files/cv.pdf">here</a>. </span></p>
+</div>
+<figure>
+<p>
+<img class="img-circle" src="images/profile_from_vv.JPG" 
+height="100px" width="auto" align="center">
+</p>
+</figure>
+</div>
+<div class="row">
+<h1 class="optima" id="pub">
+Publications <!---<a href="https://orcid.org/0000-0003-3114-3517" style="color: #b2c046;font-size:22px"><i class="ai ai-orcid ai-lg"></i></a>&nbsp;<a href="https://arxiv.org/a/ren_j_2.html" style="color: #b31b1b; font-size:22px"><i class="ai ai-arxiv ai-lg"></i></a>&nbsp;<a href="https://scholar.google.com/citations?user=qkadBVcAAAAJ&hl=en" style="color: gray; font-size:22px"><i class="ai ai-google-scholar ai-lg"></i></a>&nbsp;<a href="https://github.com/llorz" style="color:#A34DAD; font-size:22px"><i class="fab fa-github fa-lg"></i></a> 
+--->
+</h1>
+</div>
+<div class="row" style="margin-top:-5px">
+<p>Jump to year:   <a href="#2021" style="font-family:optima">2021</a>,  <a href="#2020" style="font-family:optima">2020</a>,  <a href="#2019" style="font-family:optima">2019</a>,  <a href="#2018" style="font-family:optima">2018</a>,  <a href="#2017" style="font-family:optima">2017</a>.</p>
+</div>
+<div class="row" style="margin-top:-5px; margin-bottom:0px">
+<h3 class="optima" id="2021">
+2021
+</h3>
+</div>
+<!---
+<hr width="60px" align="right" style="margin-top:-5px; border-width: 1px; margin-bottom:-3px" >
+
+
+
+
+<div class="row">
+<div class="column_paper" style="column-gap:20px">
+<figure>
+<p><img src="images/paper_sig21_roof_v2.png" 
+height="70px" width="auto">
+</figure>
+<span>
+**Interactive Reconstruction and Generative Modeling of Roof Meshes**
+</span><br>
+<span>
+<u>Jing Ren</u>, [Biao Zhang][biao], [Bojiang Wu][bojian], [Lubin Fan][lubin], [Jianqiang Huang][hjq], [Maks Ovsjanikov][maks], [Peter Wonka][peter]
+</span><br>
+<span>
+
+</span><br>
+<span>
+[<i class="fas fa-file-pdf"></i> paper]()&nbsp;
+[<i class="fas fa-code"></i> code]()&nbsp;
+[<i class="fas fa-video"></i> video]()
+</span><br>
+</p>
+</div>
+</div>
+--->
+<div class="row">
+<div class="column_paper" style="column-gap:20px">
+<span class="optima"> <strong>Shape Matching and Map Space Exploration via Functional Maps</strong> </span><br> <span> <u>Jing Ren</u> </span><br> <span> <em>PhD Thesis, 2021</em> </span><br> <span> <a href="https://repository.kaust.edu.sa/handle/10754/670353"><i class="fas fa-file-pdf"></i> paper</a> </span><br>
+</p>
+</div>
+<figure>
+<p>
+<img src="images/kaust_logo.jpg" 
+height="70px" width="auto"
+align="right">
+</figure>
+</div>
+<div class="row">
+<div class="column_paper" style="column-gap:20px">
+<span class="optima"> <strong>Discrete Optimization for Shape Matching</strong> </span><br> <span> <u>Jing Ren</u>, <a href="https://sites.google.com/site/melzismn/">Simone Melzi</a>, <a href="http://peterwonka.net/">Peter Wonka</a>, <a href="http://www.lix.polytechnique.fr/~maks/">Maks Ovsjanikov</a> </span><br> <span> <em>Computer Graphics Forum (Proc. SGP), 2021</em> </span><br> <span> <a href="http://www.lix.polytechnique.fr/~maks/papers/SGP21_DiscMapOpt.pdf"><i class="fas fa-file-pdf"></i> paper</a>  <a href="http://www.lix.polytechnique.fr/~maks/papers/SGP21_DiscMapOpt_SupMat.pdf"><i class="fas fa-file-pdf"></i> suppl.</a>  <a href="https://github.com/llorz/SGP21_discreteOptimization"><i class="fas fa-code"></i> code</a>  <a href="https://youtu.be/YEjfnbhKaBI"><i class="fas fa-video"></i> presentation</a> </span><br>
+</p>
+</div>
+<figure>
+<p>
+<img src="images/paper_sgp21_discreteOpti.png" 
+height="80px" width="auto"
+align="right">
+</figure>
+</div>
+<div class="row">
+<div class="column_paper" style="column-gap:20px">
+<span class="optima"> <strong>Fast Sinkhorn Filters: Using Matrix Scaling for Non-Rigid Shape Correspondence with Functional Maps</strong> </span><br> <span> <a href="https://sites.google.com/view/paigautam/home">Gautam Pai</a>, <u>Jing Ren</u>, <a href="https://sites.google.com/site/melzismn/">Simone Melzi</a>, <a href="http://peterwonka.net/">Peter Wonka</a>, <a href="http://www.lix.polytechnique.fr/~maks/">Maks Ovsjanikov</a> </span><br> <span> <em>Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2021</em> </span><br> <span> <a href="https://hal.archives-ouvertes.fr/hal-03184936/document"><i class="fas fa-file-pdf"></i> paper</a>  <a href="https://hal.archives-ouvertes.fr/hal-03184936/file/10374-supp.pdf"><i class="fas fa-file-pdf"></i> suppl.</a>  <a href="https://github.com/paigautam/CVPR21_FastSinkhornFilters"><i class="fas fa-code"></i> code</a>  <a href="https://drive.google.com/file/d/1hX06R5IvoRICebYkLg7s4hv04X5npBXJ/view"><i class="fas fa-file-pdf"></i> poster</a>  <a href="https://www.youtube.com/watch?v=nI7-mpibgus&amp;ab_channel=GautamPai"><i class="fas fa-video"></i> presentation</a> </span><br>
+</p>
+</div>
+<figure>
+<p>
+<img src="images/paper_cvpr21_sinkhorn.png" 
+height="70px" width="auto" align="right">
+</figure>
+</div>
+<div class="row" style="margin-top:-5px; margin-bottom:0px">
+<h3 class="optima" id="2020">
+2020
+</h3>
+</div>
+<div class="row">
+<div class="column_paper" style="column-gap:20px">
+<span class="optima"> <strong>Geometric analysis of shape variability of lower jaws of prehistoric humans</strong> </span><br> <span> <u>Jing Ren</u>, <a href="http://peterwonka.net/">Peter Wonka</a>, <a href="https://www.researchgate.net/profile/Harihara-Gowtham">Gowtham Harihara</a>, <a href="http://www.lix.polytechnique.fr/~maks/">Maks Ovsjanikov</a> </span><br> <span> <em>L’Anthropologie, 2020</em> </span><br> <span> <a href="https://www.sciencedirect.com/science/article/pii/S0003552120301035"><i class="fas fa-file-pdf"></i> paper (official)</a>  <a href="https://www.dropbox.com/s/7ef6wokei08y4sr/2020_jaws.pdf?dl=0"><i class="fas fa-file-pdf"></i> paper (preprint)</a>  <a href="https://github.com/llorz/PROJ2020_jaws"><i class="fas fa-code"></i> code</a> </span><br>
+</p>
+</div>
+<figure>
+<p>
+<img src="images/paper_proj20_jaws.png" 
+height="70px" width="auto" align="right">
+</figure>
+</div>
+<div class="row">
+<div class="column_paper" style="column-gap:20px">
+<span class="optima"> <strong>MapTree: Recovering Multiple Solutions in the Space of Maps</strong> </span><br> <span> <u>Jing Ren</u>, <a href="https://sites.google.com/site/melzismn/">Simone Melzi</a>, <a href="http://www.lix.polytechnique.fr/~maks/">Maks Ovsjanikov</a>, <a href="http://peterwonka.net/">Peter Wonka</a> </span><br> <span> <em>ACM Transactions on Graphics (Proc. SIGGRAPH Asia), 2020</em> </span><br> <span> <a href="https://arxiv.org/abs/2006.02532"><i class="fas fa-file-pdf"></i> paper</a>  <a href="https://github.com/llorz/SGA20_mapExplor"><i class="fas fa-code"></i> code</a>  <a href="https://www.dropbox.com/s/njfuc2v93vn46ny/SGA20_maptree.pdf?dl=0"><i class="fas fa-file-powerpoint"></i> slides</a>  <a href="https://www.dropbox.com/s/buswufwklzuaa7s/SGA20_maptree_presentation.mp4?dl=0"><i class="fas fa-video"></i> presentation</a> </span><br>
+</p>
+</div>
+<figure>
+<p>
+<img src="images/paper_sga20_maptree.png" 
+height="80px" width="auto" align="right">
+</figure>
+</div>
+<div class="row">
+<div class="column_paper" style="column-gap:20px">
+<span class="optima"> <strong>MGCN: Descriptor Learning using Multiscale GCNs</strong> </span><br> <span> <a href="https://sites.google.com/view/yiqun-wang/home">Yiqun Wang</a>, <u>Jing Ren</u>, <a href="https://sites.google.com/site/yandongming/">Dong-Ming Yan</a>, <a href="https://jianweiguo.net/">Jianwei Guo</a>, <a href="http://people.ucas.ac.cn/~zhangxiaopeng?language=en#%20155727">Xiaopeng Zhang</a>, <a href="http://peterwonka.net/">Peter Wonka</a> </span><br> <span> <em>ACM Transactions on Graphics (Proc. SIGGRAPH), 2020</em> </span><br> <span> <a href="https://arxiv.org/abs/2001.10472"><i class="fas fa-file-pdf"></i> paper</a>  <a href="https://github.com/yiqun-wang/MGCN"><i class="fas fa-code"></i> code</a>  <a href="https://drive.google.com/file/d/1s1lGZ5THV7OM9l1t5C_ZClmyAT2MkDjt/view"><i class="fas fa-file-powerpoint"></i> slides</a> </span><br>
+</p>
+</div>
+<figure>
+<p>
+<img src="images/paper_sig20_mgcn.png" 
+height="80px" width="auto" align="right">
+</figure>
+</div>
+<div class="row">
+<div class="column_paper" style="column-gap:20px">
+<span class="optima"> <strong>Consistent ZoomOut: Efficient Spectral Map Synchronization</strong> </span><br> <span> <a href="https://novalhuang.wixsite.com/rhuang">Ruqi Huang</a>, <u>Jing Ren</u>, <a href="http://peterwonka.net/">Peter Wonka</a>, <a href="http://www.lix.polytechnique.fr/~maks/">Maks Ovsjanikov</a> </span><br> <span> <em>Computer Graphics Forum (Proc. SGP), 2020</em> </span><br> <span> <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.14084"><i class="fas fa-file-pdf"></i> paper</a>  <a href="https://github.com/ruqihuang/SGP2020_ConsistentZoomOut"><i class="fas fa-code"></i> code</a>  <a href="https://www.youtube.com/watch?v=WhduuY9o8QQ&amp;t=24s&amp;ab_channel=RuqiHuang"><i class="fas fa-video"></i> presentation</a> </span><br>
+</p>
+</div>
+<figure>
+<p>
+<img src="images/paper_sgp20_czo.png" 
+height="80px" width="auto"
+align="right">
+</figure>
+</div>
+<div class="row" style="margin-top:-5px; margin-bottom:0px">
+<h3 class="optima" id="2019">
+2019
+</h3>
+</div>
+<div class="row">
+<div class="column_paper" style="column-gap:20px">
+<span class="optima"> <strong>ZoomOut: Spectral Upsampling for Efficient Shape Correspondence</strong> </span><br> <span> <a href="https://sites.google.com/site/melzismn/">Simone Melzi*</a>, <u>Jing Ren</u>*, <a href="https://sites.google.com/site/erodola/">Emanuele Rodolà</a>, <a href="https://not-iitian.github.io/">Abhishek Sharma</a>, <a href="http://peterwonka.net/">Peter Wonka</a>, <a href="http://www.lix.polytechnique.fr/~maks/">Maks Ovsjanikov</a> </span><br> <span> <em>ACM Transactions on Graphics (Proc. SIGGRAPH Asia), 2019</em> </span><br> <span> <a href="https://www.dropbox.com/s/duhr5b426xb1q72/2019sga_zoomout.pdf?dl=0"><i class="fas fa-file-pdf"></i> paper</a>  <a href="https://github.com/llorz/SGA19_zoomOut"><i class="fas fa-code"></i> code</a>  <a href="https://www.dropbox.com/s/yvi1b6npk4kqlas/SGA19_zoomOut_slides.pdf?dl=0"><i class="fas fa-file-powerpoint"></i> slides</a> (* equal contribution) </span><br>
+</p>
+</div>
+<figure>
+<p>
+<img src="images/paper_sga19_zoomout.png" 
+height="80px" width="auto"
+align="right">
+</figure>
+</div>
+<div class="row">
+<div class="column_paper" style="column-gap:20px">
+<span class="optima"> <strong>Structured Regularization of Functional Map Computations</strong> </span><br> <span> <u>Jing Ren</u>, <a href="https://dblp.org/pid/230/7842.html">Mikhail Panine</a>, <a href="http://peterwonka.net/">Peter Wonka</a>, <a href="http://www.lix.polytechnique.fr/~maks/">Maks Ovsjanikov</a> </span><br> <span> <em>Computer Graphics Forum (Proc. SGP), 2019</em> </span><br> <span> <a href="https://www.dropbox.com/s/ctvor2e25eaaev6/2019SGP_Structured_Regularization_fMap.pdf?dl=0"><i class="fas fa-file-pdf"></i> paper</a>  <a href="https://github.com/llorz/SGP19_complex_resolvent_laplacian"><i class="fas fa-code"></i> code</a>  <a href="https://www.dropbox.com/s/ah8if4wywfr98su/SGP19_complex_resolvent_laplacian.pdf?dl=0"><i class="fas fa-file-powerpoint"></i> slides</a> </span><br>
+</p>
+</div>
+<figure>
+<p>
+<img src="images/paper_sgp19_resolvent.png" 
+height="80px" width="auto"
+align="right">
+</figure>
+</div>
+<div class="row" style="margin-top:-5px; margin-bottom:0px">
+<h3 class="optima" id="2018">
+2018
+</h3>
+</div>
+<div class="row">
+<div class="column_paper" style="column-gap:20px">
+<span class="optima"> <strong>Continuous and Orientation-preserving Correspondence via Functional Maps</strong> </span><br> <span> <u> Jing Ren</u>, <a href="https://scholar.google.com/citations?user=zsGbyGYAAAAJ&amp;hl=fr">Adrien Poulenard</a>, <a href="http://peterwonka.net/">Peter Wonka</a>, <a href="http://www.lix.polytechnique.fr/~maks/">Maks Ovsjanikov</a> </span><br> <span> <em>ACM Transactions on Graphics (Proc. SIGGRAPH Asia), 2018</em> </span><br> <span> <a href="https://www.dropbox.com/s/j0r4x5yul5s76rw/2018SGA_orientation_BCICP.pdf?dl=0"><i class="fas fa-file-pdf"></i> paper</a>  <a href="https://github.com/llorz/SGA18_orientation_BCICP_code"><i class="fas fa-code"></i> code</a>  <a href="https://www.dropbox.com/s/uc7501d81vxbip5/SGA18_orientation_slides.pdf?dl=0"><i class="fas fa-file-powerpoint"></i> slides</a> </span><br>
+</p>
+</div>
+<figure>
+<p>
+<img src="images/paper_sga18_bcicp.png" 
+height="80px" width="auto"
+align="right">
+</figure>
+</div>
+<div class="row" style="margin-top:-5px; margin-bottom:0px">
+<h3 class="optima" id="2017">
+2017
+</h3>
+</div>
+<div class="row">
+<div class="column_paper" style="column-gap:20px">
+<span class="optima"> <strong>Joint Graph Layouts for Visualizing Collections of Segmented Meshes</strong> </span><br> <span> <u>Jing Ren</u>, <a href="https://scholar.google.de/citations?user=em4IRO4AAAAJ&amp;hl=en">Jens Schneider</a>, <a href="http://www.lix.polytechnique.fr/~maks/">Maks Ovsjanikov</a>, <a href="http://peterwonka.net/">Peter Wonka</a> </span><br> <span> <em>IEEE Transactions on Visualization and Computer Graphics (TVCG), 2017</em> </span><br> <span> <a href="https://ieeexplore.ieee.org/document/8031987/"><i class="fas fa-file-pdf"></i> paper</a>  <a href="https://github.com/llorz/TVCG17_JointMap_code"><i class="fas fa-code"></i> code</a>  <a href="https://www.dropbox.com/s/l73hp1ty1o4nofz/SGP19_TVCG17_jointLayout.pdf?dl=0"><i class="fas fa-file-powerpoint"></i> slides</a>  <a href="https://www.youtube.com/watch?v=Z-mr97gtMcM&amp;ab_channel=PeterWonkaResearch"><i class="fas fa-video"></i> video</a> </span><br>
+</p>
+</div>
+<figure>
+<p>
+<img src="images/paper_tvcg17_graph.png" 
+height="80px" width="auto"
+align="right">
+</figure>
+</div>
+<div class="row">
+<h1 class="optima">
+Education
+</h1>
+</div>
+<div class="row">
+<div class="column3">
+<p>
+<img src="images/kaust_logo.jpg" style="height:55px; margin-right:5px" align="left"> <span> Ph.D. in Computer Science </span><br> <span class="optima"> <strong>KAUST, Visual Computing Center</strong> </span><br> <span> <em>2015 - 2021</em> </span>
+</p>
+</div>
+<div class="column3">
+<p>
+<img src="images/ox_logo.png" style="height:60px; margin-right:5px; margin-left:20px" align="left" > <span> M.Sc. in Financial Mathematics </span><br> <span class="optima"> <strong>Oxford University</strong> </span><br> <span> <em>2014 - 2015</em> </span>
+</p>
+</div>
+<div class="column3">
+<p>
+<img src="images/zju_logo.png" style="height:60px; margin-right:5px" align="left"> <span> B.Sc. in Math and Applied Math </span><br> <span class="optima"> <strong>Zhejiang University</strong> </span><br> <span> <em>2010 - 2014</em> </span>
+</p>
+</div>
+</div>
+<p><br></p>
+<div class="row">
+<h1 class="optima">
+Research Experience
+</h1>
+</div>
+<div class="row">
+<div class="column2" style="column-gap:20px">
+<p>
+<img src="images/ali_logo.jpg" style="height:55px; margin-right:-5px" align="left"> <span class="optima"> <strong>Alibaba, DAMO Academy, AI Center (City Brain)</strong> </span><br> <span> Supervised by Dr. <a href="https://lubinfan.github.io/">Lubin Fan</a> </span><br> <span> <em>July 2020 - June 2021</em> </span>
+</p>
+</div>
+<div class="column2" style="column-gap:10px">
+<p>
+<img src="images/polytech_logo.png" style="height:60px; margin-right:5px" align="left"> <span class="optima"> <strong>Ecole Polytechnique, LIX</strong> </span><br> <span> Supervised by Prof. <a href="http://www.lix.polytechnique.fr/~maks/">Maks Ovsjanikov</a> </span><br> <span> <em>Jun - Aug 2017, 2018, 2019</em> </span>
+</p>
+</div>
+</div>
+<style type="text/css">
+#TOC {
+  left: 50px;
+  width: 200px;
+  margin: 20px 0px 0px 0px;
+}
+
+.main-container {
+    margin-left: 20px;
+}
+</style>
+<style type="text/css">
+.column {
+  float: left;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 20%;
+}
+
+.column2 {
+  float: left;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 50%;
+}
+
+.column3 {
+  float: left;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 33%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.column_info {
+  float: left;
+  margin-left: 0px;
+  width: 85%
+}
+
+.column_paper {
+  float: left;
+  margin-left: 5px;
+  width: 73%
+}
+
+.left_paper {
+  width: 27%;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+
+h1.optima{
+  font-size: 25px;
+  font-family: optima;
+  margin-bottom: 10pt
+}
+
+
+h3.optima{
+  font-size: 20px;
+  font-family: optima;
+  color:#14BB9A
+}
+
+
+span.optima{font-family:optima, Sans-serif}
+</style>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
+
