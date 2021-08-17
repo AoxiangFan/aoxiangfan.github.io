@@ -1,0 +1,25 @@
+title: "REN Jing"
+author: "REN Jing"
+date: "`r Sys.Date()`"
+
+output_dir: "."
+
+navbar:
+  title: "REN Jing"
+  left:
+    - text: Publications
+      href: "#pub"
+  right:
+    - icon: ai-google-scholar ai-lg
+      href: https://scholar.google.com/citations?user=qkadBVcAAAAJ&hl=en
+    - icon: fab fa-github fa-lg
+      href: http://github.com/llorz
+      
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    theme: flatly
+    includes:
+      in_header: favicon.html
