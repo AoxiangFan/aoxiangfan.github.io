@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta content="A View-consistent Sampling Method for Regularized Training of Neural Radiance Fields" property="og:title">
+  <meta content="A View-consistent Sampling Method for Regularized Training of Neural Radiance Fields" property="twitter:title">
+  <meta content="We propose a view-consistent sampling method for Neural Radiance Fields training by distilling a foundation model." name="description">
+  <meta content="We propose a view-consistent sampling method for Neural Radiance Fields training by distilling a foundation model." property="og:description">
+  <meta content="We propose a view-consistent sampling method for Neural Radiance Fields training by distilling a foundation model." property="twitter:description">
+  <meta property="og:type" content="website">
+ 
+  <title>A View-consistent Sampling Method for Regularized Training of Neural Radiance Fields</title>
+  <meta name="description" content="We propose a view-consistent sampling method for Neural Radiance Fields training by distilling a foundation model.">
+  <meta name="keywords" content="Neural Radiance Fields, NeRF, View-consistent Sampling, Regularized Training, Foundation Model">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TPWJGFG8CS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-TPWJGFG8CS');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/custom.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+</head>
+<body>
+
+<section class="hero space-background has-text-white">
+  <div class="hero-body space-background-overlay">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title has-text-white">A View-consistent Sampling Method for Regularized Training of Neural Radiance Fields</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://aoxiangfan.github.io/" target="_blank">Aoxiang Fan</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://corentindumery.github.io/" target="_blank">Corentin Dumery</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://ntalabot.github.io/" target="_blank">Nicolas Talabot</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://people.epfl.ch/pascal.fua?lang=en" target="_blank">Pascal Fua</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Computer Vision Laboratory, EPFL, Switzerland,</span>
+            <br><br>
+            <span class="author-block">ICCV 2025</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2305.14334" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/diffusion-hyperfeatures/diffusion_hyperfeatures" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code <span class="has-text-success">(New!)</span></span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4">Abstract</h2>
+        <div class="content has-text-justified">
+          Neural Radiance Fields (NeRF) has emerged as a compelling framework for scene representation and 3D recovery. To improve its performance on real-world data, depth regularizations have proven to be the most effective ones.However, depth estimation models not only require expensive 3D supervision in training, but also suffer from generalization issues. As a result, the depth estimations can be erroneous in practice, especially for outdoor unbounded scenes. In this paper, we propose to employ view-consistent distributions instead of fixed depth value estimations to regularize NeRF training. Specifically, the distribution is computed by utilizing both low-level color features and high-level distilled features from foundation models at the projected 2D pixel-locations from per-ray sampled 3D points. By sampling from the view-consistency distributions, an implicit regularization is imposed on the training of NeRF. We also utilize a depth-pushing loss that works in conjunction with the sampling technique to jointly provide effective regularizations for eliminating the failure modes. Extensive experiments conducted on various scenes from public datasets demonstrate that our proposed method can generate significantly better novel view synthesis results than state-of-the-art NeRF variants as well as different depth regularization methods.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- A -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-4">View-consistent Sampling</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our central idea is to pre-compute a view-consistency distribution along rays and to perform importance sampling according to this distribution. As a result, the sampling will concentrate around <p style="color: red;">surface points</p> instead of <p style="color: blue;">random points</p> in the capture volume.
+          </p>
+        </div>
+        <figure class="image approach-figure">
+	  	    <!-- <img src="./assets/approach.png"> -->
+          <embed src="assets/keyidea.pdf" width="100%" height="600px" type="application/pdf">
+	  	  </figure>
+      </div>
+    </div>
+    <!--/ A -->
+    <br>
+    <!-- B -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-4">Distilling Grometric Information from DINOv2</h2>
+        <div class="content has-text-justified">
+          <p>
+          	We distill the foundation model DINOv2 for geometric information by tuning our projection network on real images from MegaDepth dataset. 
+            <br>
+            Following is the visualization of the feature distillation process. For the two test images from Megadepth dataset, we first randomly generate $50$ ground truth correspondences (same as in the training process), shown as colored dots, and then extract vanilla DINOv2 features (384 dimension) and the proposed distilled DINOv2 features (32 dimension) at these locations. We compute the feature similarities across the two views and show the resulting similarity matrices on the right, where an optimal correspondence should give the identity matrix.
+          </p>
+        </div>
+        <div class="columns">
+          <figure class="image approach-figure">
+            <img src="./assets/distillation.png">
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!--/ B -->
+    <!-- C -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <!-- <h2 class="title is-3">Transfer to Synthetic Images</h2> -->
+        <div class="content has-text-justified">
+          <p>
+            Visualization of the effectiveness of the view-consistency metric on the Bonsai scene from the MipNeRF360 dataset. As shown, we shoot a ray from the reference point in the leftmost image, compute the view-consistency metric distribution along the ray, and reproject the peak point in the distribution onto other views. The projections of the peak are consistent and correspond to a surface point.
+          </p>
+        </div>
+      
+        <div class="columns">
+          <figure class="image approach-figure">
+            <img src="./assets/vc_metric.png">
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!--/ C -->
+    <!-- D -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-4">Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            We show comparisons of VS-NeRF to the main competitors and the corresponding ground truth images from held-out test views. The scenes are, from the top down:
+            Bicycle with 60 training views, Stump with 110 training views, Counter with 70 training views from the Mip-NeRF360 dataset and Francis with 70 training views from Tanks\&Temples. The '+' prefix indicates the included additional component to Nerfacto.
+            <br>
+            We also show performances of VS-NeRF and competitors with increasing number of views over Mip-NeRF360 dataset and Tanks\&Temples, in terms of PSNR values. The '+' prefix indicates the included additional component to Nerfacto.
+          </p>
+        </div>
+        <div class="columns">
+          <figure class="image column">
+            <img src="./assets/results_figure.png">
+          </figure>
+          <figure class="image column">
+            <img src="./assets/results_graph.png">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+    @inproceedings{fan2025vcs,
+      title={A View-consistent Sampling Method for Regularized Training of Neural Radiance Fields},
+      author={Fan, Aoxiang and Dumery, Corentin and Talabot, Nicolas and Fua, Pascal},
+      booktitle={International Conference on Computer Vision (ICCV)},
+      year={2025}
+    }
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a 
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+              Creative Commons Attribution-ShareAlike 4.0 International License
+            </a>. 
+            The website template is from the 
+            <a href="https://github.com/nerfies/nerfies.github.io">
+              Nerfies
+            </a> 
+            project page.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
