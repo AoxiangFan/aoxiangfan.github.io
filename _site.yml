@@ -1,19 +1,19 @@
-title: "REN Jing"
-author: "REN Jing"
+title: "Aoxaing Fan"
+author: "Aoxiang Fan"
 date: "`r Sys.Date()`"
 
 output_dir: "."
 
 navbar:
-  title: "REN Jing"
+  title: "Aoxiang Fan"
   left:
     - text: Publications
       href: "#pub"
   right:
     - icon: ai-google-scholar ai-lg
-      href: https://scholar.google.com/citations?user=qkadBVcAAAAJ&hl=en
+      href: https://scholar.google.com/citations?hl=zh-CN&user=S1RneAuEVGcC
     - icon: fab fa-github fa-lg
-      href: http://github.com/llorz
+      href: https://github.com/AoxiangFan
       
 output:
   html_document:
