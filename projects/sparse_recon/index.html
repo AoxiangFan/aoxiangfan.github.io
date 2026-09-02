@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Generalizable Neural Reconstruction of High-Fidelity Surfaces via Sparse Volumetric Representations. ECCV 2026.">
+  <meta name="keywords" content="Neural Reconstruction, 3D Surfaces, Sparse Volumetric Representations, ECCV 2026">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generalizable Neural Reconstruction of High-Fidelity Surfaces via Sparse Volumetric Representations</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" type="image/png" href="../../favicon_io/favicon-32x32.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Generalizable Neural Reconstruction of High-Fidelity Surfaces via Sparse Volumetric Representations</h1>
+            <h1 class="title is-size-3" style="color:#5a6268;">ECCV 2026</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://aoxiangfan.github.io/">Aoxiang Fan</a>,  </span>
+            <span class="author-block">
+              <a href="https://corentindumery.github.io/">Corentin Dumery</a>,  </span>
+            <span class="author-block">
+              <a href="https://ntalabot.github.io/">Nicolas Talabot</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/mingu6">Ming Xu</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://hieulem.github.io/">Hieu Le</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://people.epfl.ch/pascal.fua">Pascal Fua</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">CVLab, EPFL, Switzerland</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://www.arxiv.org/abs/2507.05952"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=SY-qPkHXr_A"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Poster Link. -->
+              <span class="link-block">
+                <a href="./assets/ECCV26_poster.png"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-image"></i>
+                  </span>
+                  <span>Poster</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://aoxiangfan.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Neural implicit representations have recently achieved impressive results in novel view synthesis and multi-view 3D reconstruction, yet both NeRF- and Gaussian Splatting-based methods require per-scene optimization, which makes them inefficient. Generalizable Neural Surface Reconstruction (GNSR) methods have been proposed to remove this need by learning feature representations directly predicted from input images. However, their typical reliance on dense feature volumes severely limits achievable resolution and fidelity due to prohibitive memory costs. We introduce Sparse Volumetric Reconstruction (SVRecon), a new GNSR framework that unlocks high-resolution, memory-efficient reconstruction through learned occupancy-driven sparsity, in a more effective way than earlier approaches to introducing sparsity in GNSRs. Our approach uses a nested two-stage architecture: (1) an occupancy prediction network that identifies surface-containing voxels, and (2) a high-resolution sparse volume rendering framework defined only within these occupied regions, together with specialized sparsified algorithms for ray sampling, feature aggregation, and querying. This design enables fine-grained surface reconstruction while avoiding the heavy memory footprint of dense grids. SVRecon operates at resolutions up to $512^3$ on standard 32GB hardware—substantially higher than prior generalizable methods—and delivers smoother and more precise reconstructions across diverse datasets, particularly in sparse-view settings.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+            <h2 class="title is-3">Video</h2>
+            <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/SY-qPkHXr_A"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+
+    <div class="container is-max-desktop">
+
+        <!-- Framework. -->
+        <div class="content has-text-justified">
+          <h2 class="title is-3 has-text-centered"><p>Framework Overview</p></h2>
+          <div class="has-text-centered">
+            <img style="width: 100%;" src="./assets/diagram.png"
+                 alt="SVRecon Framework."/>
+          </div>
+          <p>
+            SVRecon is a two-stage approach: 
+            <b>In the first stage</b>, we train a network to predict 3D occupancy, which is formulated as a classification problem, from the input images at a coarse resolution. e.g. 128^3.
+            <b>In the second stage</b>, we construct a sparse scene representation within only the preserved voxels, at a very high resolution, e.g. 512^3. Generalizable volume rendering are then performed over this sparse scene representation.  
+          </p>
+        </div>
+
+        <!--/ Framework. -->
+    </div>
+
+    <br/>
+
+
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+
+        <!-- Structural Optimization. -->
+        <div class="content has-text-justified">
+            <h2 class="title is-3 has-text-centered"><p>Generalizable Reconstruction Results</p></h2>
+            <div class="has-text-centered">
+              <img style="width: 100%;" src="./assets/example.png"
+                   alt="An illustrative example of generalizable reconstruction results."/>
+            </div>
+            <p>
+              Qualitative comparison on DTU dataset.
+            </p>
+          </div>
+
+        <!--/ Structural Optimization. -->
+
+        <br/>
+
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+
+        <!-- Structural Optimization. -->
+        <div class="content has-text-justified">
+            <h2 class="title is-3 has-text-centered"><p>Generalizable Reconstruction Results</p></h2>
+            <div class="has-text-centered">
+              <img style="width: 100%;" src="./assets/quali1.png"
+                   alt="Qualitative comparison on DTU dataset."/>
+            </div>
+            <p>
+              Qualitative comparison on DTU dataset.
+            </p>
+          </div>
+
+        <!--/ Structural Optimization. -->
+
+        <br/>
+
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+
+        <!-- Structural Optimization. -->
+        <div class="content has-text-justified">
+            <h2 class="title is-3 has-text-centered"><p>Generalizable Reconstruction Results</p></h2>
+            <div class="has-text-centered">
+              <img style="width: 100%;" src="./assets/quali2.png"
+                   alt="Qualitative comparison on Co3D dataset."/>
+            </div>
+            <p>
+              Qualitative comparison on Co3D dataset.
+            </p>
+          </div>
+
+        <!--/ Structural Optimization. -->
+
+        <br/>
+
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+
+        <!-- Poster. -->
+        <div class="content has-text-justified">
+            <h2 class="title is-3 has-text-centered"><p>Poster</p></h2>
+            <div class="has-text-centered">
+              <a href="./assets/ECCV26_poster.png">
+                <img style="width: 100%;" src="./assets/ECCV26_poster.png"
+                     alt="SVRecon ECCV 2026 Poster."/>
+              </a>
+            </div>
+          </div>
+
+        <!--/ Poster. -->
+
+    </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{fan2026svrecon,
+      author    = {Fan, Aoxiang and Dumery, Corentin and Talabot, Nicolas and Xu, Ming and Le, Hieu and Fua, Pascal},
+      title     = {Generalizable Neural Reconstruction of High-Fidelity Surfaces via Sparse Volumetric Representations.},
+      booktitle = {Proceedings of the European Conference on Computer Vision (ECCV)},
+      year      = {2026}
+}</code></pre>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        Thanks to <a href="https://www.flaticon.com/" target="_blank">Flaticon</a> for providing beautiful icons.
+        The website template is borrowed from <a href="https://hypernerf.github.io/" target="_blank">HyperNeRF</a>.
+      </div>
+    </div>
+</footer>
+
+</body>
+</html>
